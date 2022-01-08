@@ -14,7 +14,11 @@
 #' @docType package
 #' @name malawi
 #' @keywords internal
-#'
+#' @importFrom utils unzip download.file
+#' @importFrom rhdx pull_dataset get_resource download_resource
+#' @importFrom sf st_read
+#' @importFrom magrittr %>%
+#' @importFrom stringr str_detect str_split
 #'
 #
 ################################################################################
