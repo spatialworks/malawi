@@ -4,6 +4,11 @@
 # malawi: Datasets for Designing Surveys in Malawi <img src="man/figures/logo.svg" width="200px" align="right"/>
 
 <!-- badges: start -->
+
+[![Project Status: WIP – Initial development is in progress, but there
+has not yet been a stable, usable release suitable for the
+public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
+[![R-CMD-check](https://github.com/spatialworks/malawi/workflows/R-CMD-check/badge.svg)](https://github.com/spatialworks/malawi/actions)
 <!-- badges: end -->
 
 Designing surveys require relevant datasets to be used as basis for
