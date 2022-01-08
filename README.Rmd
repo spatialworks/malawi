@@ -6,19 +6,25 @@ output: github_document
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
+  message = FALSE,
+  warning = FALSE,
+  error = FALSE,
   collapse = TRUE,
   comment = "#>",
   fig.path = "man/figures/README-",
   out.width = "100%"
 )
+
+#library(malawi)
 ```
 
 # malawi: Datasets for Designing Surveys in Malawi <img src="man/figures/logo.svg" width="200px" align="right"/>
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/spatialworks/malawi/workflows/R-CMD-check/badge.svg)](https://github.com/spatialworks/malawi/actions)
 <!-- badges: end -->
 
-Designing surveys require relevant datasets to be used as basis for sample size calculations, sampling design, survey planning/logistics and survey implementation. These include datasets on population, lists of sampling clusters, map datasets for spatial sampling, and previous survey datasets that can be used for estimating indicator variance and design effects. This package contains relevant datasets for use in designing surveys in Mozambique.
+Designing surveys require relevant datasets to be used as basis for sample size calculations, sampling design, survey planning/logistics and survey implementation. These include datasets on population, lists of sampling clusters, map datasets for spatial sampling, and previous survey datasets that can be used for estimating indicator variance and design effects. This package contains relevant datasets for use in designing surveys in Malawi.
 
 ## Installation
 
@@ -27,4 +33,23 @@ You can install the development version from [GitHub](https://github.com/spatial
 ```r
 if (!require("remotes")) install.packages("remotes")
 remotes::install_github("spatialworks/malawi")
+```
+
+## Usage
+
+### Retrieve and plot Malawi country borders
+
+```{r mwi1, echo = FALSE, eval = FALSE}
+country <- get_country()
+
+plot(sf::st_geometry(country))
+```
+
+
+### Retrieve and plot Malawi regions borders
+
+```{r mwi2, echo = FALSE, eval = FALSE}
+regions <- get_regions()
+
+plot(sf::st_geometry(regions))
 ```

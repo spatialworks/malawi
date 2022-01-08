@@ -12,7 +12,7 @@ survey implementation. These include datasets on population, lists of
 sampling clusters, map datasets for spatial sampling, and previous
 survey datasets that can be used for estimating indicator variance and
 design effects. This package contains relevant datasets for use in
-designing surveys in Mozambique.
+designing surveys in Malawi.
 
 ## Installation
 
@@ -23,3 +23,9 @@ You can install the development version from
 if (!require("remotes")) install.packages("remotes")
 remotes::install_github("spatialworks/malawi")
 ```
+
+## Usage
+
+### Retrieve and plot Malawi country borders
+
+### Retrieve and plot Malawi regions borders
