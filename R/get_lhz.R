@@ -3,7 +3,6 @@
 #'
 #' Download Malawi livelihood zones shapefiles from Humanitarian Data Exchange
 #'
-#' @param .url Download URL of livelihoods zones shapefiles
 #' @param .unzip Logical. Should zip file be unzipped and extracted? Default to
 #'   TRUE
 #'
@@ -19,8 +18,28 @@
 #
 ################################################################################
 
-download_lhz_shapefiles <- function(.url = "https://geonode.wfp.org/geoserver/wfs?format_options=charset:UTF-8&typename=geonode:mwi_phy_predlhz_geonode_20140612&outputFormat=SHAPE-ZIP&version=1.0.0&service=WFS&request=GetFeature",
-                                    .unzip = TRUE) {
+download_lhz_shapefiles <- function(.unzip = TRUE) {
+  base_url <- "https://geonode.wfp.org/geoserver/wfs?"
+  format_options <- "format_options=charset:UTF-8"
+  typename <- "typename=geonode:mwi_phy_predlhz_geonode_20140612"
+  outputFormat <- "outputFormat=SHAPE-ZIP"
+  version <- "version=1.0"
+  service <- "service=WFS"
+  request <- "request=GetFeature"
+
+  .url <- paste0(
+    base_url,
+    paste(
+      format_options,
+      typename,
+      outputFormat,
+      version,
+      service,
+      request,
+      sep = "&"
+    )
+  )
+
   zipfile <- tempfile()
 
   utils::download.file(url = .url, destfile = zipfile)

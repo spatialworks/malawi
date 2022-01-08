@@ -53,18 +53,12 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">download_lhz_shapefiles</span><span class="op">(</span>
- 
-    .url <span class="op">=</span> <span class="st">"https://geonode.wfp.org/geoserver/wfs?format_options=charset:UTF-8&amp;typename=geonode:mwi_phy_predlhz_geonode_20140612&amp;outputFormat=SHAPE-ZIP&amp;version=1.0.0&amp;service=WFS&amp;request=GetFeature"</span>,
-  .unzip <span class="op">=</span> <span class="cn">TRUE</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">download_lhz_shapefiles</span><span class="op">(</span>.unzip <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
-    <dl><dt>.url</dt>
-<dd><p>Download URL of livelihoods zones shapefiles</p></dd>
-<dt>.unzip</dt>
+    <dl><dt>.unzip</dt>
 <dd><p>Logical. Should zip file be unzipped and extracted? Default to
 TRUE</p></dd>
 </dl></div>
@@ -79,12 +73,12 @@ specified folder.</p>
     <h2>Examples</h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu">download_lhz_shapefiles</span><span class="op">(</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>                                   Name  Length                Date</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 mwi_phy_predlhz_geonode_20140612.cst       5 2022-01-08 18:37:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 mwi_phy_predlhz_geonode_20140612.prj     335 2022-01-08 18:37:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 mwi_phy_predlhz_geonode_20140612.dbf   23689 2022-01-08 18:37:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4 mwi_phy_predlhz_geonode_20140612.shp 2459932 2022-01-08 18:37:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5 mwi_phy_predlhz_geonode_20140612.shx     324 2022-01-08 18:37:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6                       wfsrequest.txt     184 2022-01-08 18:37:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 mwi_phy_predlhz_geonode_20140612.cst       5 2022-01-08 19:00:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 mwi_phy_predlhz_geonode_20140612.prj     335 2022-01-08 19:00:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 mwi_phy_predlhz_geonode_20140612.shp 2459932 2022-01-08 19:00:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 mwi_phy_predlhz_geonode_20140612.dbf   23689 2022-01-08 19:00:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5 mwi_phy_predlhz_geonode_20140612.shx     324 2022-01-08 19:00:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6                       wfsrequest.txt     182 2022-01-08 19:00:00</span>
 <span class="r-in"></span>
 </code></pre></div>
     </div>

@@ -4,15 +4,9 @@
 \alias{download_lhz_shapefiles}
 \title{Download Malawi livelihood zones shapefiles from Humanitarian Data Exchange}
 \usage{
-download_lhz_shapefiles(
- 
-    .url = "https://geonode.wfp.org/geoserver/wfs?format_options=charset:UTF-8&typename=geonode:mwi_phy_predlhz_geonode_20140612&outputFormat=SHAPE-ZIP&version=1.0.0&service=WFS&request=GetFeature",
-  .unzip = TRUE
-)
+download_lhz_shapefiles(.unzip = TRUE)
 }
 \arguments{
-\item{.url}{Download URL of livelihoods zones shapefiles}
-
 \item{.unzip}{Logical. Should zip file be unzipped and extracted? Default to
 TRUE}
 }
