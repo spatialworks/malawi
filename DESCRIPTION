@@ -21,7 +21,8 @@ Imports:
 Suggests: 
     spelling
 Remotes:  
-    github/dickoa
+    github/dickoa,
+    github::dickoa/rhdx
 Encoding: UTF-8
 Language: en-GB
 LazyData: true
