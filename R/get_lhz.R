@@ -42,7 +42,13 @@ download_lhz_shapefiles <- function(.unzip = TRUE) {
 
   zipfile <- tempfile()
 
-  utils::download.file(url = .url, destfile = zipfile, mode = "wb")
+  ## Check OS
+  if (.Platform$OS.type != "unix") {
+    utils::download.file(url = .url, destfile = zipfile, mode = "wb")
+  } else {
+    utils::download.file(url = .url, destfile = zipfile)
+  }
+
 
   ## Unzip file?
   if (.unzip) {
