@@ -19,6 +19,7 @@
 #' @importFrom sf st_read
 #' @importFrom magrittr %>%
 #' @importFrom stringr str_detect str_split
+#' @importFrom RCurl url.exists
 #'
 #
 ################################################################################

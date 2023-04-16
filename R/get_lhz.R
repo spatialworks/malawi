@@ -40,20 +40,32 @@ download_lhz_shapefiles <- function(.unzip = TRUE) {
     )
   )
 
-  zipfile <- tempfile()
+  ## Perform URL check
+  urltest <- RCurl::url.exists(.url)
 
-  utils::download.file(url = .url, destfile = zipfile, mode = "wb")
+  if (urltest) {
+    zipfile <- tempfile()
 
-  ## Unzip file?
-  if (.unzip) {
-    shp_files <- utils::unzip(zipfile = zipfile, list = TRUE, exdir = tempdir())
-    utils::unzip(zipfile = zipfile, exdir = tempdir())
+    utils::download.file(url = .url, destfile = zipfile, mode = "wb")
+
+    ## Unzip file?
+    if (.unzip) {
+      shp_files <- utils::unzip(
+        zipfile = zipfile, list = TRUE, exdir = tempdir()
+      )
+      utils::unzip(zipfile = zipfile, exdir = tempdir())
+    } else {
+      shp_files <- zipfile
+    }
+
+    ## Return
+    shp_files
   } else {
-    shp_files <- zipfile
+    warning(
+      "The WFP geonode server is currently unavailable. Try again later.",
+      call. = TRUE
+    )
   }
-
-  ## Return
-  shp_files
 }
 
 
@@ -75,14 +87,18 @@ download_lhz_shapefiles <- function(.unzip = TRUE) {
 ################################################################################
 
 get_lhz_name <- function(files = download_lhz_shapefiles()) {
-  ## Get layer name
-  layer_names <- files[["Name"]] %>%
-    stringr::str_split(pattern = "\\.", simplify = TRUE)
+  if (is.data.frame(files)) {
+    ## Get layer name
+    layer_names <- files[["Name"]] %>%
+      stringr::str_split(pattern = "\\.", simplify = TRUE)
 
-  layer_name <- layer_names[[1]]
+    layer_name <- layer_names[[1]]
 
-  ## Return
-  layer_name
+    ## Return
+    layer_name
+  } else {
+    files
+  }
 }
 
 
@@ -104,9 +120,13 @@ get_lhz_name <- function(files = download_lhz_shapefiles()) {
 ################################################################################
 
 get_lhz <- function(layer = get_lhz_name()) {
-  ## Read lhz shapefile
-  lhz <- sf::st_read(dsn = tempdir(), layer = layer)
-
-  ## Return
-  lhz
+  if (!stringr::str_detect(layer, pattern = "geonode")) {
+    ## Read lhz shapefile
+    sf::st_read(dsn = tempdir(), layer = layer)
+  } else {
+    layer
+  }
 }
+
+
+#http://shapefiles.fews.net/LHZ/MW_LHZ_2015.zip

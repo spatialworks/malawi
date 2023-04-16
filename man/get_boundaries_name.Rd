@@ -4,7 +4,7 @@
 \alias{get_boundaries_name}
 \title{Get administrative boundaries layer name}
 \usage{
-get_boundaries_name(files = download_boundaries_shapefiles(), adm = NULL)
+get_boundaries_name(files, adm = NULL)
 }
 \arguments{
 \item{files}{List of shapefiles within a downloaded zip file}
@@ -19,6 +19,8 @@ Layer name for specified administrative level boundary
 Get administrative boundaries layer name
 }
 \examples{
-get_boundaries_name(adm = 0)
+get_boundaries_name(
+  download_boundaries_shapefiles(id = "cod-ab-mwi"), adm = 0
+)
 
 }

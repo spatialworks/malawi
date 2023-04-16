@@ -58,67 +58,138 @@ Exchange</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">download_boundaries_shapefiles</span><span class="op">(</span>.unzip <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">download_boundaries_shapefiles</span><span class="op">(</span><span class="va">id</span>, .unzip <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
-    <dl><dt>.unzip</dt>
+    <dl><dt>id</dt>
+<dd><p>Character vector for unique identifier of administrative
+boundaries data for Malawi from Humanitarian Data Exchange</p></dd>
+
+
+<dt>.unzip</dt>
 <dd><p>Logical. Should zip file be unzipped and extracted? Default to
 TRUE</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>If <code>.unzip</code>, list of shapefiles within the downloaded zip file else
+    
+
+<p>If <code>.unzip</code>, list of shapefiles within the downloaded zip file else
 path to downloaded zip file. (Invisible) Shapefiles zip file downloaded to
 specified folder.</p>
     </div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu">download_boundaries_shapefiles</span><span class="op">(</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                            Name  Length                Date</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1             mwi_admbnda_adm0_nso_20181016.cpg       5 2020-02-20 14:39:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2             mwi_admbnda_adm0_nso_20181016.dbf     667 2020-02-20 14:39:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3             mwi_admbnda_adm0_nso_20181016.prj     145 2020-02-20 14:39:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4             mwi_admbnda_adm0_nso_20181016.sbn     132 2020-02-20 14:39:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5             mwi_admbnda_adm0_nso_20181016.sbx     116 2020-02-20 14:39:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6             mwi_admbnda_adm0_nso_20181016.shp  823432 2020-02-20 14:39:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7         mwi_admbnda_adm0_nso_20181016.shp.xml  135894 2020-02-20 14:39:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8             mwi_admbnda_adm0_nso_20181016.shx     108 2020-02-20 14:39:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9             mwi_admbnda_adm1_nso_20181016.cpg       5 2020-02-20 14:39:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10            mwi_admbnda_adm1_nso_20181016.dbf    1657 2020-02-20 14:39:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11            mwi_admbnda_adm1_nso_20181016.prj     145 2020-02-20 14:39:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12            mwi_admbnda_adm1_nso_20181016.sbn     148 2020-02-20 14:39:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13            mwi_admbnda_adm1_nso_20181016.sbx     116 2020-02-20 14:39:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14            mwi_admbnda_adm1_nso_20181016.shp  948056 2020-02-20 14:39:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15        mwi_admbnda_adm1_nso_20181016.shp.xml  143473 2020-02-20 14:39:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16            mwi_admbnda_adm1_nso_20181016.shx     124 2020-02-20 14:39:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17            mwi_admbnda_adm2_nso_20181016.cpg       5 2020-02-20 14:39:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18            mwi_admbnda_adm2_nso_20181016.dbf   16898 2020-02-20 14:39:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19            mwi_admbnda_adm2_nso_20181016.prj     145 2020-02-20 14:39:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20            mwi_admbnda_adm2_nso_20181016.sbn     468 2020-02-20 14:39:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21            mwi_admbnda_adm2_nso_20181016.sbx     156 2020-02-20 14:39:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22            mwi_admbnda_adm2_nso_20181016.shp 2314568 2020-02-20 14:39:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 23        mwi_admbnda_adm2_nso_20181016.shp.xml  173754 2020-02-20 14:39:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 24            mwi_admbnda_adm2_nso_20181016.shx     356 2020-02-20 14:39:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 25            mwi_admbnda_adm3_nso_20181016.cpg       5 2020-02-20 14:39:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26            mwi_admbnda_adm3_nso_20181016.dbf  226130 2020-02-20 14:39:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 27            mwi_admbnda_adm3_nso_20181016.prj     145 2020-02-20 14:39:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 28            mwi_admbnda_adm3_nso_20181016.sbn    3812 2020-02-20 14:39:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 29            mwi_admbnda_adm3_nso_20181016.sbx     380 2020-02-20 14:39:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 30            mwi_admbnda_adm3_nso_20181016.shp 5664452 2020-02-20 14:39:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 31        mwi_admbnda_adm3_nso_20181016.shp.xml  204851 2020-02-20 14:39:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 32            mwi_admbnda_adm3_nso_20181016.shx    3044 2020-02-20 14:39:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 33     mwi_admbndl_admALL_nso_itos_20181016.cpg       5 2020-02-20 14:40:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 34     mwi_admbndl_admALL_nso_itos_20181016.dbf   55270 2020-02-20 14:40:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 35     mwi_admbndl_admALL_nso_itos_20181016.prj     145 2020-02-20 14:40:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 36     mwi_admbndl_admALL_nso_itos_20181016.sbn   11924 2020-02-20 14:40:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 37     mwi_admbndl_admALL_nso_itos_20181016.sbx     972 2020-02-20 14:40:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 38     mwi_admbndl_admALL_nso_itos_20181016.shp 3311076 2020-02-20 14:40:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 39 mwi_admbndl_admALL_nso_itos_20181016.shp.xml  180613 2020-02-20 14:40:00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 40     mwi_admbndl_admALL_nso_itos_20181016.shx    9092 2020-02-20 14:40:00</span>
-<span class="r-in"></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">download_boundaries_shapefiles</span><span class="op">(</span>id <span class="op">=</span> <span class="st">"cod-ab-mwi"</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                   Name   Length</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1             mwi_admbnda_adm0_nso_hotosm_20230405.cpg        5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2             mwi_admbnda_adm0_nso_hotosm_20230405.dbf      421</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3             mwi_admbnda_adm0_nso_hotosm_20230405.prj      145</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4             mwi_admbnda_adm0_nso_hotosm_20230405.sbn      132</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5             mwi_admbnda_adm0_nso_hotosm_20230405.sbx      116</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6             mwi_admbnda_adm0_nso_hotosm_20230405.shp  2910420</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7         mwi_admbnda_adm0_nso_hotosm_20230405.shp.xml   240788</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8             mwi_admbnda_adm0_nso_hotosm_20230405.shx      108</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9             mwi_admbnda_adm1_nso_hotosm_20230405.cpg        5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10            mwi_admbnda_adm1_nso_hotosm_20230405.dbf     1111</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11            mwi_admbnda_adm1_nso_hotosm_20230405.prj      145</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12            mwi_admbnda_adm1_nso_hotosm_20230405.sbn      148</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13            mwi_admbnda_adm1_nso_hotosm_20230405.sbx      116</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14            mwi_admbnda_adm1_nso_hotosm_20230405.shp  3306820</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15        mwi_admbnda_adm1_nso_hotosm_20230405.shp.xml   247506</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16            mwi_admbnda_adm1_nso_hotosm_20230405.shx      124</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17            mwi_admbnda_adm2_nso_hotosm_20230405.cpg        5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18            mwi_admbnda_adm2_nso_hotosm_20230405.dbf    12002</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19            mwi_admbnda_adm2_nso_hotosm_20230405.prj      145</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20            mwi_admbnda_adm2_nso_hotosm_20230405.sbn      468</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21            mwi_admbnda_adm2_nso_hotosm_20230405.sbx      156</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22            mwi_admbnda_adm2_nso_hotosm_20230405.shp  7169888</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23        mwi_admbnda_adm2_nso_hotosm_20230405.shp.xml   305153</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24            mwi_admbnda_adm2_nso_hotosm_20230405.shx      356</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25            mwi_admbnda_adm3_nso_hotosm_20230405.cpg        5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26            mwi_admbnda_adm3_nso_hotosm_20230405.dbf   222611</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27            mwi_admbnda_adm3_nso_hotosm_20230405.prj      145</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28            mwi_admbnda_adm3_nso_hotosm_20230405.sbn     4340</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29            mwi_admbnda_adm3_nso_hotosm_20230405.sbx      388</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30            mwi_admbnda_adm3_nso_hotosm_20230405.shp 17720128</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31        mwi_admbnda_adm3_nso_hotosm_20230405.shp.xml   306076</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32            mwi_admbnda_adm3_nso_hotosm_20230405.shx     3564</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33     mwi_admbndl_admALL_nso_hotosm_itos_20230405.cpg        5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34     mwi_admbndl_admALL_nso_hotosm_itos_20230405.dbf    85993</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35     mwi_admbndl_admALL_nso_hotosm_itos_20230405.prj      145</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36     mwi_admbndl_admALL_nso_hotosm_itos_20230405.sbn    16980</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37     mwi_admbndl_admALL_nso_hotosm_itos_20230405.sbx     1012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38     mwi_admbndl_admALL_nso_hotosm_itos_20230405.shp 10579884</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39 mwi_admbndl_admALL_nso_hotosm_itos_20230405.shp.xml   414308</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40     mwi_admbndl_admALL_nso_hotosm_itos_20230405.shx    14108</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41     mwi_admbndp_admALL_nso_hotosm_itos_20230405.cpg        5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42     mwi_admbndp_admALL_nso_hotosm_itos_20230405.dbf   210455</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43     mwi_admbndp_admALL_nso_hotosm_itos_20230405.prj      145</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44     mwi_admbndp_admALL_nso_hotosm_itos_20230405.sbn     4300</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45     mwi_admbndp_admALL_nso_hotosm_itos_20230405.sbx      348</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46     mwi_admbndp_admALL_nso_hotosm_itos_20230405.shp    12224</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47 mwi_admbndp_admALL_nso_hotosm_itos_20230405.shp.xml   319825</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48     mwi_admbndp_admALL_nso_hotosm_itos_20230405.shx     3564</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49                     mwi_admbndt_adminUnitLookup.cpg        5</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50                     mwi_admbndt_adminUnitLookup.dbf      746</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51                 mwi_admbndt_adminUnitLookup.dbf.xml     7866</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                   Date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  2023-04-10 13:36:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  2023-04-10 13:36:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  2023-04-10 13:36:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4  2023-04-10 13:36:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5  2023-04-10 13:36:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6  2023-04-10 13:36:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7  2023-04-10 13:47:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8  2023-04-10 13:36:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9  2023-04-10 13:38:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10 2023-04-10 13:38:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11 2023-04-10 13:38:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12 2023-04-10 13:38:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13 2023-04-10 13:38:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14 2023-04-10 13:38:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15 2023-04-10 13:47:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16 2023-04-10 13:38:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17 2023-04-10 13:40:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18 2023-04-10 13:40:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19 2023-04-10 13:40:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20 2023-04-10 13:40:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21 2023-04-10 13:40:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22 2023-04-10 13:40:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23 2023-04-10 13:47:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24 2023-04-10 13:40:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25 2023-04-10 13:41:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26 2023-04-10 13:41:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27 2023-04-10 13:41:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28 2023-04-10 13:41:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29 2023-04-10 13:41:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30 2023-04-10 13:41:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31 2023-04-10 13:47:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32 2023-04-10 13:41:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33 2023-04-10 13:44:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34 2023-04-10 13:44:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35 2023-04-10 13:44:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36 2023-04-10 13:44:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37 2023-04-10 13:44:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38 2023-04-10 13:44:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39 2023-04-10 13:47:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40 2023-04-10 13:44:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41 2023-04-10 13:46:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42 2023-04-10 13:46:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43 2023-04-10 13:46:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44 2023-04-10 13:46:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45 2023-04-10 13:46:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46 2023-04-10 13:46:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47 2023-04-10 13:47:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48 2023-04-10 13:46:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49 2023-04-07 11:35:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50 2023-04-07 11:35:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51 2023-04-07 11:35:00</span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -133,7 +204,7 @@ specified folder.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

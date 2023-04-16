@@ -53,68 +53,34 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">get_ta_areas</span><span class="op">(</span>layer <span class="op">=</span> <span class="fu"><a href="get_boundaries_name.html">get_boundaries_name</a></span><span class="op">(</span>adm <span class="op">=</span> <span class="fl">3</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">get_ta_areas</span><span class="op">(</span><span class="va">id</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
-    <dl><dt>layer</dt>
-<dd><p>Name of layer for traditional authority areas boundaries</p></dd>
+    <dl><dt>id</dt>
+<dd><p>Character vector for unique identifier of administrative
+boundaries data for Malawi from Humanitarian Data Exchange</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>An sf object for the traditional authority areas borders of Malawi</p>
+    
+
+<p>An sf object for the traditional authority areas borders of Malawi</p>
     </div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu">get_ta_areas</span><span class="op">(</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Reading layer `mwi_admbnda_adm3_nso_20181016' from data source `/tmp/Rtmp3BOPv1' using driver `ESRI Shapefile'</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Simple feature collection with 368 features and 16 fields</span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">get_ta_areas</span><span class="op">(</span>id <span class="op">=</span> <span class="st">"cod-ab-mwi"</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Reading layer `mwi_admbnda_adm3_nso_hotosm_20230405' from data source </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   `/tmp/RtmpBr6BvK' using driver `ESRI Shapefile'</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Simple feature collection with 433 features and 14 fields</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Geometry type: MULTIPOLYGON</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Dimension:     XY</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Bounding box:  xmin: 32.67162 ymin: -17.12628 xmax: 35.91842 ymax: -9.363662</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Bounding box:  xmin: 32.67164 ymin: -17.12975 xmax: 35.91848 ymax: -9.367346</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Geodetic CRS:  WGS 84</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Simple feature collection with 368 features and 16 fields</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Geometry type: MULTIPOLYGON</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Dimension:     XY</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Bounding box:  xmin: 32.67162 ymin: -17.12628 xmax: 35.91842 ymax: -9.363662</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Geodetic CRS:  WGS 84</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> First 10 features:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    Shape_Leng   Shape_Area ADM3_EN ADM3_PCODE ADM3_REF ADM3ALT1EN ADM3ALT2EN</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1  0.04957897 1.204237e-04  Area 1    MW21031     &lt;NA&gt;       &lt;NA&gt;       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2  0.08651983 3.325866e-04 Area 10    MW21040     &lt;NA&gt;       &lt;NA&gt;       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3  0.02750721 4.089716e-05 Area 11    MW21041     &lt;NA&gt;       &lt;NA&gt;       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4  0.05763716 1.900178e-04 Area 12    MW21042     &lt;NA&gt;       &lt;NA&gt;       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5  0.04138362 7.830649e-05 Area 13    MW21043     &lt;NA&gt;       &lt;NA&gt;       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6  0.06773173 1.667853e-04 Area 14    MW21044     &lt;NA&gt;       &lt;NA&gt;       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7  0.03933601 8.400975e-05 Area 15    MW21045     &lt;NA&gt;       &lt;NA&gt;       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8  0.01967929 2.278832e-05 Area 16    MW21046     &lt;NA&gt;       &lt;NA&gt;       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9  0.04355325 1.066638e-04 Area 17    MW21047     &lt;NA&gt;       &lt;NA&gt;       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10 0.06671028 2.320881e-04 Area 18    MW21048     &lt;NA&gt;       &lt;NA&gt;       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          ADM2_EN ADM2_PCODE ADM1_EN ADM1_PCODE ADM0_EN ADM0_PCODE       date</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1  Lilongwe City      MW210 Central        MW2  Malawi         MW 2018-09-03</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2  Lilongwe City      MW210 Central        MW2  Malawi         MW 2018-09-03</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3  Lilongwe City      MW210 Central        MW2  Malawi         MW 2018-09-03</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4  Lilongwe City      MW210 Central        MW2  Malawi         MW 2018-09-03</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5  Lilongwe City      MW210 Central        MW2  Malawi         MW 2018-09-03</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6  Lilongwe City      MW210 Central        MW2  Malawi         MW 2018-09-03</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7  Lilongwe City      MW210 Central        MW2  Malawi         MW 2018-09-03</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8  Lilongwe City      MW210 Central        MW2  Malawi         MW 2018-09-03</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9  Lilongwe City      MW210 Central        MW2  Malawi         MW 2018-09-03</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10 Lilongwe City      MW210 Central        MW2  Malawi         MW 2018-09-03</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       validOn validTo                       geometry</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1  2018-10-16    &lt;NA&gt; MULTIPOLYGON (((33.77967 -1...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2  2018-10-16    &lt;NA&gt; MULTIPOLYGON (((33.81911 -1...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3  2018-10-16    &lt;NA&gt; MULTIPOLYGON (((33.80253 -1...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4  2018-10-16    &lt;NA&gt; MULTIPOLYGON (((33.81471 -1...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5  2018-10-16    &lt;NA&gt; MULTIPOLYGON (((33.8005 -13...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6  2018-10-16    &lt;NA&gt; MULTIPOLYGON (((33.78489 -1...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7  2018-10-16    &lt;NA&gt; MULTIPOLYGON (((33.77557 -1...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8  2018-10-16    &lt;NA&gt; MULTIPOLYGON (((33.79302 -1...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9  2018-10-16    &lt;NA&gt; MULTIPOLYGON (((33.81368 -1...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10 2018-10-16    &lt;NA&gt; MULTIPOLYGON (((33.78447 -1...</span>
-<span class="r-in"></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -129,7 +95,7 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

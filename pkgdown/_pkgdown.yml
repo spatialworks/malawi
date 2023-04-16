@@ -23,6 +23,7 @@ reference:
   contents:
     - download_boundaries_shapefiles
     - get_boundaries_name
+    - get_boundary
     - get_country
     - get_regions
     - get_districts

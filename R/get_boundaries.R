@@ -4,6 +4,8 @@
 #' Download Malawi administrative boundaries shapefiles from Humanitarian Data
 #' Exchange
 #'
+#' @param id Character vector for unique identifier of administrative
+#'   boundaries data for Malawi from Humanitarian Data Exchange
 #' @param .unzip Logical. Should zip file be unzipped and extracted? Default to
 #'   TRUE
 #'
@@ -12,18 +14,18 @@
 #'   specified folder.
 #'
 #' @examples
-#' download_boundaries_shapefiles()
+#' download_boundaries_shapefiles(id = "cod-ab-mwi")
 #'
 #' @export
 #'
 #
 ################################################################################
 
-download_boundaries_shapefiles <- function(.unzip = TRUE) {
+download_boundaries_shapefiles <- function(id, .unzip = TRUE) {
   folder <- tempdir()
 
   path <- rhdx::pull_dataset(
-    identifier = "malawi-administrative-level-0-3-boundaries"
+    identifier = id
   ) %>%
     rhdx::get_resource(index = 2) %>%
     rhdx::download_resource(folder = folder)
@@ -53,15 +55,16 @@ download_boundaries_shapefiles <- function(.unzip = TRUE) {
 #' @return Layer name for specified administrative level boundary
 #'
 #' @examples
-#' get_boundaries_name(adm = 0)
+#' get_boundaries_name(
+#'   download_boundaries_shapefiles(id = "cod-ab-mwi"), adm = 0
+#' )
 #'
 #' @export
 #'
 #
 ################################################################################
 
-get_boundaries_name <- function(files = download_boundaries_shapefiles(),
-                                adm = NULL) {
+get_boundaries_name <- function(files, adm = NULL) {
   ## Get layer name
   x <- files[["Name"]] %>%
     stringr::str_detect(pattern = paste0("adm", adm))
@@ -79,26 +82,56 @@ get_boundaries_name <- function(files = download_boundaries_shapefiles(),
 ################################################################################
 #
 #'
-#' Retrieve Malawi country boundaries
+#' Retrieve Malawi boundary layer
 #'
-#' @param layer Name of layer for country boundaries
+#' @param id Character vector for unique identifier of administrative
+#'   boundaries data for Malawi from Humanitarian Data Exchange
+#' @param adm Integer. Administrative level required. Either `0` for country,
+#'   `1` for regions, `2` for districts, or `3` for traditional authority areas.
 #'
-#' @return An sf object for the country borders of Malawi
+#' @return An sf object for specific boundary of Malawi
 #'
 #' @examples
-#' get_country()
+#' get_boundary(id = "cod-ab-mwi", adm = 0)
 #'
 #' @export
 #'
 #
 ################################################################################
 
-get_country <- function(layer = get_boundaries_name(adm = 0)) {
-  ## Read country shapefile
-  country <- sf::st_read(dsn = tempdir(), layer = layer)
+get_boundary <- function(id, adm = NULL) {
+  ## Get files from specific downloaded shapfiles
+  files <- download_boundaries_shapefiles(id = id, .unzip = TRUE)
 
-  ## Return
-  country
+  ## Get specific layer
+  layer <- get_boundaries_name(files = files, adm = adm)
+
+  ## Read shapefile for layer
+  sf::st_read(dsn = tempdir(), layer = layer)
+}
+
+
+################################################################################
+#
+#'
+#' Retrieve Malawi country boundaries
+#'
+#' @param id Character vector for unique identifier of administrative
+#'   boundaries data for Malawi from Humanitarian Data Exchange
+#'
+#' @return An sf object for the country borders of Malawi
+#'
+#' @examples
+#' get_country(id = "cod-ab-mwi")
+#'
+#' @export
+#'
+#
+################################################################################
+
+get_country <- function(id) {
+  ## Get country boundaries
+  get_boundary(id = id, adm = 0)
 }
 
 
@@ -107,24 +140,21 @@ get_country <- function(layer = get_boundaries_name(adm = 0)) {
 #'
 #' Retrieve Malawi regions boundaries
 #'
-#' @param layer Name of layer for regions boundaries
+#' @param id Character vector for unique identifier of administrative
+#'   boundaries data for Malawi from Humanitarian Data Exchange
 #'
 #' @return An sf object for the regions borders of Malawi
 #'
 #' @examples
-#' get_regions()
+#' get_regions(id = "cod-ab-mwi")
 #'
 #' @export
 #'
 #
 ################################################################################
 
-get_regions <- function(layer = get_boundaries_name(adm = 1)) {
-  ## Read provinces shapefile
-  regions <- sf::st_read(dsn = tempdir(), layer = layer)
-
-  ## Return
-  regions
+get_regions <- function(id) {
+  get_boundary(id = id, adm = 1)
 }
 
 
@@ -133,24 +163,21 @@ get_regions <- function(layer = get_boundaries_name(adm = 1)) {
 #'
 #' Retrieve Malawi districts boundaries
 #'
-#' @param layer Name of layer for districts boundaries
+#' @param id Character vector for unique identifier of administrative
+#'   boundaries data for Malawi from Humanitarian Data Exchange
 #'
 #' @return An sf object for the districts borders of Malawi
 #'
 #' @examples
-#' get_districts()
+#' get_districts(id = "cod-ab-mwi")
 #'
 #' @export
 #'
 #
 ################################################################################
 
-get_districts <- function(layer = get_boundaries_name(adm = 2)) {
-  ## Read districts shapefile
-  districts <- sf::st_read(dsn = tempdir(), layer = layer)
-
-  ## Return
-  districts
+get_districts <- function(id) {
+  get_boundary(id = id, adm = 2)
 }
 
 
@@ -159,24 +186,21 @@ get_districts <- function(layer = get_boundaries_name(adm = 2)) {
 #'
 #' Retrieve Malawi traditional authority areas boundaries
 #'
-#' @param layer Name of layer for traditional authority areas boundaries
+#' @param id Character vector for unique identifier of administrative
+#'   boundaries data for Malawi from Humanitarian Data Exchange
 #'
 #' @return An sf object for the traditional authority areas borders of Malawi
 #'
 #' @examples
-#' get_ta_areas()
+#' get_ta_areas(id = "cod-ab-mwi")
 #'
 #' @export
 #'
 #
 ################################################################################
 
-get_ta_areas <- function(layer = get_boundaries_name(adm = 3)) {
-  ## Read posts shapefile
-  taa <- sf::st_read(dsn = tempdir(), layer = layer)
-
-  ## Return
-  taa
+get_ta_areas <- function(id) {
+  get_boundary(id = id, adm = 3)
 }
 
 

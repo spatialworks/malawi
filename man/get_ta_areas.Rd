@@ -4,10 +4,11 @@
 \alias{get_ta_areas}
 \title{Retrieve Malawi traditional authority areas boundaries}
 \usage{
-get_ta_areas(layer = get_boundaries_name(adm = 3))
+get_ta_areas(id)
 }
 \arguments{
-\item{layer}{Name of layer for traditional authority areas boundaries}
+\item{id}{Character vector for unique identifier of administrative
+boundaries data for Malawi from Humanitarian Data Exchange}
 }
 \value{
 An sf object for the traditional authority areas borders of Malawi
@@ -16,6 +17,6 @@ An sf object for the traditional authority areas borders of Malawi
 Retrieve Malawi traditional authority areas boundaries
 }
 \examples{
-get_ta_areas()
+get_ta_areas(id = "cod-ab-mwi")
 
 }

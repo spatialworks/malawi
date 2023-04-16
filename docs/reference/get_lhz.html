@@ -53,69 +53,28 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">get_lhz</span><span class="op">(</span>layer <span class="op">=</span> <span class="fu"><a href="get_lhz_name.html">get_lhz_name</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">get_lhz</span><span class="op">(</span>layer <span class="op">=</span> <span class="fu"><a href="get_lhz_name.html">get_lhz_name</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>layer</dt>
 <dd><p>Name of layer for livelihood zones</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>An sf object for the livelihood zones of Malawi</p>
+    
+
+<p>An sf object for the livelihood zones of Malawi</p>
     </div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu">get_lhz</span><span class="op">(</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Reading layer `mwi_phy_predlhz_geonode_20140612' from data source </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   `/tmp/Rtmp3BOPv1' using driver `ESRI Shapefile'</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Simple feature collection with 28 features and 6 fields</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Geometry type: MULTIPOLYGON</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Dimension:     XY</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Bounding box:  xmin: -17.125 ymin: 32.67395 xmax: -9.367541 ymax: 35.91682</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Geodetic CRS:  WGS 84</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Simple feature collection with 28 features and 6 fields</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Geometry type: MULTIPOLYGON</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Dimension:     XY</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Bounding box:  xmin: -17.125 ymin: 32.67395 xmax: -9.367541 ymax: 35.91682</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Geodetic CRS:  WGS 84</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> First 10 features:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    ADM2_CODE  ADM2_NAME ADM1_CODE       ADM1_NAME</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1      19317    Karonga      1889 Northern Region</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2      19322   Chikwawa      1890 Southern Region</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3      19323 Chiradzulu      1890 Southern Region</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4      19330      Zomba      1890 Southern Region</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5      42174     Balaka      1890 Southern Region</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6      42175   Machinga      1890 Southern Region</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7      42176    Mulanje      1890 Southern Region</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8      19314    Ntchisi      1888  Central Region</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9      19316    Chitipa      1889 Northern Region</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10     19320     Rumphi      1889 Northern Region</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                               LZNAME LZCODE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1  Chitipa-NorthernKarongaCentralKoronga-MisukuHills      1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2                                        Lower Shire      4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3                                    Shire Highlands     10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4                                    Shire Highlands     10</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5                                Middle Shire Valley      5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6                         Lake Chilwa-Phalombe Plain      3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7                         Lake Chilwa-Phalombe Plain      3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8                             Kasungu Lilongwe Plain      2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9  Chitipa-NorthernKarongaCentralKoronga-MisukuHills      1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10                                    Protected Area    999</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                          geometry</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1  MULTIPOLYGON (((-9.607379 3...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2  MULTIPOLYGON (((-15.81743 3...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3  MULTIPOLYGON (((-15.52701 3...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4  MULTIPOLYGON (((-15.20632 3...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5  MULTIPOLYGON (((-14.76657 3...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6  MULTIPOLYGON (((-14.55504 3...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7  MULTIPOLYGON (((-15.60163 3...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8  MULTIPOLYGON (((-13.01629 3...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9  MULTIPOLYGON (((-9.479989 3...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10 MULTIPOLYGON (((-10.56475 3...</span>
-<span class="r-in"></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">get_lhz</span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>The WFP geonode server is currently unavailable. Try again later.</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "The WFP geonode server is currently unavailable. Try again later."</span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -130,7 +89,7 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>
