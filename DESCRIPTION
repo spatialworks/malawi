@@ -15,17 +15,18 @@ Description: Designing surveys require relevant datasets to be used as basis for
 License: GPL (>= 3)
 Imports: 
     magrittr,
+    RCurl,
     rhdx (>= 0.1.0.9000),
     sf,
     stringr
 Suggests: 
     spelling
-Remotes:  
+Remotes: 
     github::dickoa/rhdx
 Encoding: UTF-8
 Language: en-GB
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.3
 URL: https://github.com/spatialworks/malawi, https://spatialworks.io/malawi/
 BugReports: https://github.com/spatialworks/malawi/issues

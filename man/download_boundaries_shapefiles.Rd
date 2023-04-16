@@ -5,9 +5,12 @@
 \title{Download Malawi administrative boundaries shapefiles from Humanitarian Data
 Exchange}
 \usage{
-download_boundaries_shapefiles(.unzip = TRUE)
+download_boundaries_shapefiles(id, .unzip = TRUE)
 }
 \arguments{
+\item{id}{Character vector for unique identifier of administrative
+boundaries data for Malawi from Humanitarian Data Exchange}
+
 \item{.unzip}{Logical. Should zip file be unzipped and extracted? Default to
 TRUE}
 }
@@ -21,6 +24,6 @@ Download Malawi administrative boundaries shapefiles from Humanitarian Data
 Exchange
 }
 \examples{
-download_boundaries_shapefiles()
+download_boundaries_shapefiles(id = "cod-ab-mwi")
 
 }

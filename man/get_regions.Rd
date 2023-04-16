@@ -4,10 +4,11 @@
 \alias{get_regions}
 \title{Retrieve Malawi regions boundaries}
 \usage{
-get_regions(layer = get_boundaries_name(adm = 1))
+get_regions(id)
 }
 \arguments{
-\item{layer}{Name of layer for regions boundaries}
+\item{id}{Character vector for unique identifier of administrative
+boundaries data for Malawi from Humanitarian Data Exchange}
 }
 \value{
 An sf object for the regions borders of Malawi
@@ -16,6 +17,6 @@ An sf object for the regions borders of Malawi
 Retrieve Malawi regions boundaries
 }
 \examples{
-get_regions()
+get_regions(id = "cod-ab-mwi")
 
 }

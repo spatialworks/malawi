@@ -53,68 +53,34 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">get_districts</span><span class="op">(</span>layer <span class="op">=</span> <span class="fu"><a href="get_boundaries_name.html">get_boundaries_name</a></span><span class="op">(</span>adm <span class="op">=</span> <span class="fl">2</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">get_districts</span><span class="op">(</span><span class="va">id</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
-    <dl><dt>layer</dt>
-<dd><p>Name of layer for districts boundaries</p></dd>
+    <dl><dt>id</dt>
+<dd><p>Character vector for unique identifier of administrative
+boundaries data for Malawi from Humanitarian Data Exchange</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>An sf object for the districts borders of Malawi</p>
+    
+
+<p>An sf object for the districts borders of Malawi</p>
     </div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu">get_districts</span><span class="op">(</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Reading layer `mwi_admbnda_adm2_nso_20181016' from data source `/tmp/Rtmp3BOPv1' using driver `ESRI Shapefile'</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Simple feature collection with 32 features and 14 fields</span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">get_districts</span><span class="op">(</span>id <span class="op">=</span> <span class="st">"cod-ab-mwi"</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Reading layer `mwi_admbnda_adm2_nso_hotosm_20230405' from data source </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   `/tmp/RtmpBr6BvK' using driver `ESRI Shapefile'</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Simple feature collection with 32 features and 11 fields</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Geometry type: MULTIPOLYGON</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Dimension:     XY</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Bounding box:  xmin: 32.67162 ymin: -17.12628 xmax: 35.91842 ymax: -9.363662</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Bounding box:  xmin: 32.67164 ymin: -17.12975 xmax: 35.91848 ymax: -9.367346</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Geodetic CRS:  WGS 84</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Simple feature collection with 32 features and 14 fields</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Geometry type: MULTIPOLYGON</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Dimension:     XY</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Bounding box:  xmin: 32.67162 ymin: -17.12628 xmax: 35.91842 ymax: -9.363662</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Geodetic CRS:  WGS 84</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> First 10 features:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    Shape_Leng Shape_Area       ADM2_EN ADM2_PCODE ADM2_REF ADM2ALT1EN</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1    2.036817 0.17937902        Balaka      MW312     &lt;NA&gt;       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2    2.677448 0.15084692      Blantyre      MW305     &lt;NA&gt;       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3    0.818570 0.01992904 Blantyre City      MW315     &lt;NA&gt;       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4    3.521776 0.41345664      Chikwawa      MW310     &lt;NA&gt;       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5    1.527801 0.06411710    Chiradzulu      MW304     &lt;NA&gt;       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6    5.039122 0.35047693       Chitipa      MW101     &lt;NA&gt;       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7    3.654707 0.31496451         Dedza      MW208     &lt;NA&gt;       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8    3.355039 0.25598628          Dowa      MW204     &lt;NA&gt;       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9    3.520828 0.28146640       Karonga      MW102     &lt;NA&gt;       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10   4.854784 0.67204026       Kasungu      MW201     &lt;NA&gt;       &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    ADM2ALT2EN  ADM1_EN ADM1_PCODE ADM0_EN ADM0_PCODE       date    validOn</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1        &lt;NA&gt; Southern        MW3  Malawi         MW 2018-09-03 2018-10-16</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2        &lt;NA&gt; Southern        MW3  Malawi         MW 2018-09-03 2018-10-16</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3        &lt;NA&gt; Southern        MW3  Malawi         MW 2018-09-03 2018-10-16</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4        &lt;NA&gt; Southern        MW3  Malawi         MW 2018-09-03 2018-10-16</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5        &lt;NA&gt; Southern        MW3  Malawi         MW 2018-09-03 2018-10-16</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6        &lt;NA&gt; Northern        MW1  Malawi         MW 2018-09-03 2018-10-16</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7        &lt;NA&gt;  Central        MW2  Malawi         MW 2018-09-03 2018-10-16</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8        &lt;NA&gt;  Central        MW2  Malawi         MW 2018-09-03 2018-10-16</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9        &lt;NA&gt; Northern        MW1  Malawi         MW 2018-09-03 2018-10-16</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10       &lt;NA&gt;  Central        MW2  Malawi         MW 2018-09-03 2018-10-16</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    validTo                       geometry</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1     &lt;NA&gt; MULTIPOLYGON (((35.20154 -1...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2     &lt;NA&gt; MULTIPOLYGON (((35.11249 -1...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3     &lt;NA&gt; MULTIPOLYGON (((35.08555 -1...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4     &lt;NA&gt; MULTIPOLYGON (((34.34848 -1...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5     &lt;NA&gt; MULTIPOLYGON (((35.15417 -1...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6     &lt;NA&gt; MULTIPOLYGON (((33.00618 -9...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7     &lt;NA&gt; MULTIPOLYGON (((34.31159 -1...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8     &lt;NA&gt; MULTIPOLYGON (((33.70319 -1...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9     &lt;NA&gt; MULTIPOLYGON (((33.73312 -9...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10    &lt;NA&gt; MULTIPOLYGON (((33.60713 -1...</span>
-<span class="r-in"></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -129,7 +95,7 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

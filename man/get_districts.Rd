@@ -4,10 +4,11 @@
 \alias{get_districts}
 \title{Retrieve Malawi districts boundaries}
 \usage{
-get_districts(layer = get_boundaries_name(adm = 2))
+get_districts(id)
 }
 \arguments{
-\item{layer}{Name of layer for districts boundaries}
+\item{id}{Character vector for unique identifier of administrative
+boundaries data for Malawi from Humanitarian Data Exchange}
 }
 \value{
 An sf object for the districts borders of Malawi
@@ -16,6 +17,6 @@ An sf object for the districts borders of Malawi
 Retrieve Malawi districts boundaries
 }
 \examples{
-get_districts()
+get_districts(id = "cod-ab-mwi")
 
 }
