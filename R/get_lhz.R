@@ -45,7 +45,7 @@ download_lhz_shapefiles <- function(.unzip = TRUE) {
 
   if (urltest) {
     zipfile <- tempfile()
-
+    
     utils::download.file(url = .url, destfile = zipfile, mode = "wb")
 
     ## Unzip file?
