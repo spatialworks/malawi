@@ -22,11 +22,11 @@ library(malawi)
 
 <!-- badges: start -->
 [![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
-[![R-CMD-check](https://github.com/spatialworks/malawi/workflows/R-CMD-check/badge.svg)](https://github.com/spatialworks/malawi/actions)
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![R-CMD-check](https://github.com/spatialworks/malawi/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/spatialworks/malawi/actions/workflows/R-CMD-check.yaml)
 [![test-coverage](https://github.com/spatialworks/malawi/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/spatialworks/malawi/actions/workflows/test-coverage.yaml)
 [![CodeFactor](https://www.codefactor.io/repository/github/spatialworks/malawi/badge)](https://www.codefactor.io/repository/github/spatialworks/malawi)
 [![DOI](https://zenodo.org/badge/445699345.svg)](https://zenodo.org/badge/latestdoi/445699345)
-[![R-CMD-check](https://github.com/spatialworks/malawi/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/spatialworks/malawi/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 Designing surveys require relevant datasets to be used as basis for sample size calculations, sampling design, survey planning/logistics and survey implementation. These include datasets on population, lists of sampling clusters, map datasets for spatial sampling, and previous survey datasets that can be used for estimating indicator variance and design effects. This package contains relevant datasets for use in designing surveys in Malawi.
@@ -45,7 +45,7 @@ remotes::install_github("spatialworks/malawi")
 ### Retrieve and plot Malawi country borders
 
 ```{r mwi1, echo = FALSE, eval = TRUE, fig.align = "center", fig.width = 10, fig.height = 10}
-country <- get_country()
+country <- get_country(id = "cod-ab-mwi")
 
 plot(sf::st_geometry(country))
 ```
@@ -54,7 +54,7 @@ plot(sf::st_geometry(country))
 ### Retrieve and plot Malawi regions borders
 
 ```{r mwi2, echo = FALSE, eval = TRUE, fig.align = "center", fig.width = 10, fig.height = 10}
-regions <- get_regions()
+regions <- get_regions(id = "cod-ab-mwi")
 
 plot(sf::st_geometry(regions))
 ```
@@ -63,7 +63,7 @@ plot(sf::st_geometry(regions))
 ### Retrieve and plot Malawi districts borders
 
 ```{r mwi3, echo = FALSE, eval = TRUE, fig.align = "center", fig.width = 10, fig.height = 10}
-districts <- get_districts()
+districts <- get_districts(id = "cod-ab-mwi")
 
 plot(sf::st_geometry(districts))
 ```
@@ -72,7 +72,7 @@ plot(sf::st_geometry(districts))
 ### Retrieve and plot Malawi traditional authority areas borders
 
 ```{r mwi4, echo = FALSE, eval = TRUE, fig.align = "center", fig.width = 10, fig.height = 10}
-ta_areas <- get_ta_areas()
+ta_areas <- get_ta_areas(id = "cod-ab-mwi")
 
 plot(sf::st_geometry(ta_areas))
 ```
@@ -80,7 +80,7 @@ plot(sf::st_geometry(ta_areas))
 
 ### Retrieve and plot Malawi livelihood zones
 
-```{r mwi5, echo = FALSE, eval = TRUE, fig.align = "center", fig.width = 10, fig.height = 10}
+```{r mwi5, echo = FALSE, eval = FALSE, fig.align = "center", fig.width = 10, fig.height = 10}
 lhz <- get_lhz()
 
 plot(sf::st_geometry(lhz))
